@@ -23,36 +23,7 @@
 
 <body class="bg-sky-100 text-stone-900 dark:bg-primary dark:text-cyan-50 font-roboto">
 
-    <header>
-        <!-- Inicio Menu-->
-        <nav class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center">
-            <!--md significa "a partir de pantallas medianas"-->
-            <a href=""><img src="./img/icono.png" alt="icon" width="32"></a>
-            <div id="menu"
-                class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] flex flex-col items-start justify-around
-            rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary ">
-
-                <ul class="flex flex-col h-5/6 justify-around md:flex-row md:justify-center w-full ">
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Quién Soy</a></li>
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Experiencia</a></li>
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Proyectos</a></li>
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Contáctame</a></li>
-                </ul>
-                <!--Boton para modo oscuro-->
-                <button id="darkButton">
-                    <i class="bi bi-moon-stars-fill text-sky-600 text-2xl"></i>
-                </button>
-
-            </div>
-            <!-- Boton menu hamburguesa-->
-            <button id="menu-buttons" class="absolute top-10 right-12 md:hidden">
-                <span class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
-                <span class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
-                <span class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
-            </button>
-
-        </nav>
-    </header>
+   {{> header}}
 
     <main>
         <!--Seccion "hero"-->
@@ -76,7 +47,7 @@
             </div>
             <!--contenedor imagen-->
             <div class="my-10 w-full">
-                <div class="w-[300px] h-[320px] m-auto bg-[url('./img/profile.jpg')] lg:bg-[url('./img/profile.jpg')] bg-cover rounded-lg 
+                <div class="w-[300px] h-[320px] m-auto bg-[url('/img/profile.jpg')] lg:bg-[url('/img/profile.jpg')] bg-cover rounded-lg 
                     lg:w-full lg:h-full lg:bg-center lg:bg-no-repeat lg:bg-[length:617px_840px]"></div>
             </div>
             </div>

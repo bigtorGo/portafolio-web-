@@ -649,8 +649,8 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\'\.\/img\/profile\.jpg\'\)\] {
-  background-image: url('./img/profile.jpg');
+.bg-\[url\(\'\/img\/profile\.jpg\'\)\] {
+  background-image: url('/img/profile.jpg');
 }
 .bg-cover {
   background-size: cover;
@@ -963,8 +963,8 @@ video {
     border-left-width: 2px;
   }
 
-  .lg\:bg-\[url\(\'\.\/img\/profile\.jpg\'\)\] {
-    background-image: url('./img/profile.jpg');
+  .lg\:bg-\[url\(\'\/img\/profile\.jpg\'\)\] {
+    background-image: url('/img/profile.jpg');
   }
 
   .lg\:bg-\[length\:617px_840px\] {
