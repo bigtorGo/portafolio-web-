@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.br-2.cruz {
+    opacity: 0;
+}
+.br-1.cruz {
+    transform: rotate(45deg) translate(9px,8px);
+    transform-origin: 0% 100%;
+    
+}
+
+.br-3.cruz {
+    transform: rotate(-45deg) translate(-6px,8px);
+    transform-origin: 0% 100%;
+}

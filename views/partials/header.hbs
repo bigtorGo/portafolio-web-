@@ -1,3 +1,4 @@
+
 <header>
         <!-- Inicio Menu-->
         <nav class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center">
@@ -28,3 +29,59 @@
 
         </nav>
     </header>
+
+<script type="text/javascript">
+    const menuButton = document.querySelector('#menu-buttons');
+    const menuItems = document.querySelector('#menu');
+    const menuButtonSpans = document.querySelectorAll('#menu-buttons span');
+
+    menuButton.addEventListener('click', () => {
+        toggleTopMenu();
+    });
+
+    const toggleTopMenu = () => {
+        if (menuItems.classList.contains('hidden')) {
+            menuItems.classList.remove('hidden')
+            menuButtonSpans.forEach((span) => {
+
+                span.classList.add('cruz');
+
+            })
+
+        } else {
+            menuItems.classList.add('hidden')
+            menuButtonSpans.forEach((span) => {
+
+                span.classList.remove('cruz');
+
+            })
+
+        }
+
+    }
+
+    const darkButton = document.querySelector('#darkButton');
+    darkButton.addEventListener('click', function () {
+
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+    })
+</script>

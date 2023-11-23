@@ -10,13 +10,12 @@ const saveToJobExp = (data) =>{
 const readJobExp=()=>{
     if(!fs.existsSync(jobExpPath)) return null;
 
-    const info= fs.readFileSync(jobExpPath,{encoding:'utf-8'});
-    
-    return JSON.parse(info);
+    const info= JSON.parse(fs.readFileSync(jobExpPath,{encoding:'utf-8'}));
+    return info;
 
 }
 
 
 module.exports={
-    saveToFile,readFile
+    saveToJobExp,readJobExp
 }

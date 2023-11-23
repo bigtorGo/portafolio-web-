@@ -1,8 +1,16 @@
 [
     {
-        "title":"Ingeniero de software",
-        "enterprice":"Intelio",
-        "period":"23-junio - presente",
-        "description":"Lorem ipsum dolor si tamet, consectetur adipiscing elit. Pellentesque cursus vitae odio et ultrices."
+        "title":"Desarrollador de aplicaciones Móviles",
+        "enterprice":"Lab4u",
+        "address":"Las Condes, RM, Chile",
+        "urlWeb":"https://lab4u.co/es/inicio/",
+        "period":"2018 – 2020",
+        "description":"Durante el tiempo que forme parte de Lab4u tuve el desafío de llevar mis conocimientos y tecnologías a aplicaciones móviles que no tenían un enfoque de “video juego educativo”. Realizar este software, fue una de las razones que me motivo a cambiar las tecnologías y el enfoque de desarrollo que busco en la actualidad.",
+        "goal1":"Responsable del desarrollo de la aplicación Lab4Chemestry. Esta debía usar la cámara del celular para determinar el color y la concentración de un componente químico determinado en una solución líquida.",
+        "goal2":"Logré introducirme a los conceptos de visión por computadora con el uso de OpenCv.",
+        "goal3":"Durante la construcción del sistema busque la correcta delegación de responsabilidades entre clases, usando el lenguaje orientado a objetos C# y el motor de Unity3D, con la ayuda de “Arquitectura limpia” (Clean Arquitecture) de Robert C. Martin.",
+        "goal4":"Realicé un desarrollo en función de prototipos, que a lo largo de diversas iteraciones se fue adaptando al producto final.",
+        "goal5":"Mejoré los tiempos de integración de nuevos desarrolladores al proyecto. Reduciendo problemas de legibilidad y orden en el código.",
+        "goal6": "Estuve en terreno realizando pruebas con más de 60 alumnos, desde escolaridad primaria a secundaria."
     }
 ]
