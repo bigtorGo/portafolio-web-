@@ -5,7 +5,7 @@
         "address":"Las Condes, RM, Chile",
         "urlWeb":"https://lab4u.co/es/inicio/",
         "period":"2018 – 2020",
-        "description":"Durante el tiempo que forme parte de Lab4u tuve el desafío de llevar mis conocimientos y tecnologías a aplicaciones móviles que no tenían un enfoque de “video juego educativo”. Realizar este software, fue una de las razones que me motivo a cambiar las tecnologías y el enfoque de desarrollo que busco en la actualidad.",
+        "description":"Durante el tiempo que forme parte de Lab4u, tuve el desafío de llevar mis conocimientos y tecnologías a aplicaciones móviles que no tenían el enfoque de “video juego educativo” que venía trabajando hasta ese momento. Realizar este software, fue una de las razones que me motivo a cambiar las tecnologías y el enfoque de desarrollo que busco en la actualidad.",
         "goal1":"Responsable del desarrollo de la aplicación Lab4Chemestry. Esta debía usar la cámara del celular para determinar el color y la concentración de un componente químico determinado en una solución líquida.",
         "goal2":"Logré introducirme a los conceptos de visión por computadora con el uso de OpenCv.",
         "goal3":"Durante la construcción del sistema busque la correcta delegación de responsabilidades entre clases, usando el lenguaje orientado a objetos C# y el motor de Unity3D, con la ayuda de “Arquitectura limpia” (Clean Arquitecture) de Robert C. Martin.",

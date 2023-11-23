@@ -27,36 +27,10 @@
 <body class="bg-sky-100 text-stone-900 dark:bg-primary dark:text-cyan-50 font-roboto">
 
    {{> header}}
-   <h1>Portafolio</h1>
 
     <main>
         <!--Seccion "hero"-->
-        <section class="my-0 flex flex-col lg:flex-row lg:h-[850px]">
-
-            <div class="p-10 lg:w-[80%] lg:h-[500px] lg:self-center">
-                <h1 class="text-sky-600 dark:text-sky-300 text-2xl font-bold tracking-widest leading-10"> Hola Mundo!,
-                    soy</h1>
-                <p class="py-2 text-3xl font-bold text-slate-600 dark:text-slate-300">Víctor H. Gómez Atabales</p>
-                <p class="text-3xl font-bold text-slate-500 dark:text-slate-600">Comenzando en el desarrollo web</p>
-                <p class="mt-5 text-lg"> Soy ingeniero de software blabla...</p>
-                <!-- redes sociales-->
-                <div class="py-6">
-                    <a href="" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-linkedin"></i></a>
-                    <a href="" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-github"></i></a>
-                </div>
-                <dilv>
-                    <button class="border-2 rounded border-sky-500 p-3 w-[200px]
-                    text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900">Contrátame
-                    </button>
-            </div>
-            <!--contenedor imagen-->
-            <div class="my-10 w-full">
-                <div class="w-[300px] h-[320px] m-auto bg-[url('/img/profile.jpg')] lg:bg-[url('/img/profile.jpg')] bg-cover rounded-lg 
-                    lg:w-full lg:h-full lg:bg-center lg:bg-no-repeat lg:bg-[length:617px_840px]"></div>
-            </div>
-            </div>
-
-        </section>
+        {{>hero profileData=profileData}}
         <!-- seccion de experiencia laboral min 57...-->
         <h2 class="text-3xl text-slate-700 dark:text-white font-bold 
         tracking-widest w-[85%] m-auto text-center pt-8"> Experiencia laboral</h2>

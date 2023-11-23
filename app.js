@@ -1,6 +1,6 @@
 const express= require('express');
 const hbs=require('hbs');
-const {readJobExp}= require('./src/helpers/jsonDB.js');
+const {readJobsExp,readProfile}= require('./src/helpers/jsonDB.js');
 
 const app= express()
 
@@ -11,8 +11,10 @@ const port = 3000
 hbs.registerPartials(__dirname+'/views/partials',function(err){});
 
 app.get('/',(req,res)=>{//esto es un controlador
-    const job1Data=readJobExp()[0];
+    const job1Data=readJobsExp()[0];
+    const profileData=readProfile();
     res.render('index',{
+        profileData,
         job1Data,
        /* job2Object:readJobExp()[1],
         job3Object:readJobExp()[2],
