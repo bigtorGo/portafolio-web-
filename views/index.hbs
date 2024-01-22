@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,16 +26,17 @@
 
 <body class="bg-sky-100 text-stone-900 dark:bg-primary dark:text-cyan-50 font-roboto">
 
-   {{> header}}
 
     <main>
+        {{> header }}
         <!--Seccion "hero"-->
         {{>hero profileData=profileData}}
         <!-- seccion de experiencia laboral min 57...-->
         <h2 class="text-3xl text-slate-700 dark:text-white font-bold 
         tracking-widest w-[85%] m-auto text-center pt-8"> Experiencia laboral</h2>
         <!-- aqui va job section -->
-        {{> jobs jobData1=job1Data }}
+    
+        {{> jobs }}
         <!--SECCION DE PROYECTOS-->
         <h3 class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center">Proyectos
         </h3>

@@ -1,5 +1,6 @@
 [
     {
+        "id":"job1",
         "title":"Desarrollador de aplicaciones Móviles",
         "enterprice":"Lab4u",
         "address":"Las Condes, RM, Chile",
@@ -12,5 +13,32 @@
         "goal4":"Realicé un desarrollo en función de prototipos, que a lo largo de diversas iteraciones se fue adaptando al producto final.",
         "goal5":"Mejoré los tiempos de integración de nuevos desarrolladores al proyecto. Reduciendo problemas de legibilidad y orden en el código.",
         "goal6": "Estuve en terreno realizando pruebas con más de 60 alumnos, desde escolaridad primaria a secundaria."
+    },
+    {
+        "id":"job2",
+        "title":"Desarrollador Unity",
+        "enterprice":"Freelance",
+        "address":"Melipilla, RM, Chile",
+        "period":"2017 – 2018",
+        "description":"Como desarrollador independiente de Unity, lideré el proyecto \"Animales Chilenos\", una aplicación taxonómica dedicada a la fauna de Chile.",
+        "goal1":"Exploré el terreno de la auto gestión y la planificación de proyectos. Esta experiencia consolidó mi comprensión de la relevancia del cumplimiento de hitos, así como la necesidad crucial de establecer y respetar los límites de un proyecto.",
+        "goal2":"Dado que la aplicación estaba diseñada principalmente para dispositivos móviles, enfrenté el desafío de adaptar su comportamiento según el dispositivo y el tamaño de pantalla. Este aspecto se convirtió en uno de los principales focos del proyecto, destacando mi capacidad para abordar desafíos técnicos y encontrar soluciones adaptativas."
+
+    },
+    {
+        "id":"job3",
+        "title":"Desarrollador de aplicaciones",
+        "urlWeb":"https://pehuendigital.wordpress.com/",
+        "enterprice":"Pehuén Digital.",
+        "address":"Ñuñoa, RM, Chile",
+        "period":"2013 – 2016",
+        "description":"Pehuén Digital fue el área de desarrollo de software educativo en Pehuén Editores. Esta fue mi primera experiencia laboral como desarrollador de aplicaciones con unity3D. Los diversos proyectos tenían un claro enfoque de llevar la educación y la experiencia literaria a un nuevo nivel de interacción, con la inclusión de técnicas de “gamificación”.",
+        "goal1":"Fui el programador a cargo del desarrollo de tres aplicaciones, y colaborador de otras dos.",
+        "app1":"\"Atlas de Chile\" (ganador premios QuéVeo 2015, en la categoría “mejor app educativa”).Aplicación de cultura y geografía nacional.",
+        "app2":" \"Pienso Matemáticas\". Aplicación de matemáticas para niños de primero básico.",
+        "app3":"\"Diccionario Rapa Nui\". Aplicación sobre la lengua y cultura de Rapa Nui.",
+        "goal2":"Logré llevar a cabo estos proyectos sin experiencia previa del motor de videojuegos Unity3D.",
+        "goal3":"Cree herramientas de edición dentro de la interfaz de Unity3D, que permitieron a otros colaboradores modificar el sistema sin la necesidad de tener conocimientos de programación."
+
     }
 ]

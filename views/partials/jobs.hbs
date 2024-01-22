@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
     document.addEventListener("DOMContentLoaded", function () {//con esta funcion le digo al siistema que ejecute el script luego de cargar el documento html. Sin esta función el "script" debería ir al final del archivo(luego de la parte html)
 
         const jobTitleElement = document.getElementById('jobTitle');
@@ -55,252 +55,136 @@
 
     <div class="flex justify justify-between"><!--para pantalla grande: lg:flex-col lg:w-[20%] -->
         <button type="button" id="jobButton1" data-id="job1"
-            class="border-sky-500  bg-white border-b-2  dark:bg-slate-700 hover:bg-cyan-200 focus:border-sky-500 focus:bg-white focus:dark:bg-slate-700 hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
+            class="border-sky-500  bg-white border-b-2  dark:bg-slate-700 hover:bg-cyan-200 focus:border-sky-500 focus:bg-cyan-500 focus:dark:bg-slate-700 hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
             1
         </button><!--"lg:text-left lg:border-l-2 lg:border-b-0 lg:h-full" -->
         <!--Por defecto el primer boton debe estar "selecionado". Para eso se usan los estilos "border-sky-500  bg-white dark:bg-slate-700" -->
         <button type="button" id="jobButton2" data-id="job2"
-            class="border-gray-900 border-b-2 hover:bg-cyan-200 focus:border-sky-500 focus:bg-white focus:dark:bg-slate-700 hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
+            class="border-gray-900 border-b-2 hover:bg-cyan-200 focus:border-sky-500 focus:bg-cyan-500 focus:dark:bg-slate-700 hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
             2
         </button>
         <button type="button" id="jobButton3" data-id="job3"
-            class="border-gray-900 border-b-2 hover:bg-cyan-200 focus:border-sky-500 focus:bg-white focus:dark:bg-slate-700  hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
+            class="border-gray-900 border-b-2 hover:bg-cyan-200 focus:border-sky-500 focus:bg-cyan-500 focus:dark:bg-slate-700  hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia
             3
-        </button>
-        <button type="button" id="jobButton4" data-id="job4" class="border-gray-900 border-b-2 hover:bg-cyan-200 focus:border-sky-500 focus:bg-white focus:dark:bg-slate-700  
-                hover:dark:bg-slate-700 w-full px-4 py-1">Experiencia 4
         </button>
     </div>
     <!--COntenido de cada experiencia laboral-->
     <!--contenedor articulo de experiencia laboral-->
     <div class="my-6 lg:px-10 lg:max-w-auto"> <!--lg:max-w-[800px]-->
-        <article id="job1">
-            <h3 id="jobTitle" class="text-xl "> {{jobData1.title}} en <a target="_blank" href="{{jobData1.urlWeb}}"
-                    class="text-sky-500 font-bold text-lg px-2"> {{jobData1.enterprice}} </a>
+        
+        <article id="{{getFirstJobData "id"}}">
+            <h3 id="jobTitle" class="text-xl "> {{getFirstJobData "title"}} en <a target="_blank" href="{{getFirstJobData "urlWeb"}}"
+                    class="text-sky-500 font-bold text-lg px-2"> {{getFirstJobData "enterprice"}} </a>
             </h3>
 
 
             <div class="flex justify-between items-baseline">
-                <address class="text-sm">{{jobData1.address}} </address>
-                <h4 class="text-sm mr-10">{{jobData1.period}}</h4>
+                <address class="text-sm">{{getFirstJobData "address"}} </address>
+                <h4 class="text-sm mr-10">{{getFirstJobData "period"}}</h4>
             </div>
 
-            <p class="mt-6 mb-3 text-lg ">{{jobData1.description}}</p>
+            <p class="mt-6 mb-3 text-lg ">{{getFirstJobData "description"}}</p>
             <ul>
 
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal1}}
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal1"}}
                     </p>
                 </li>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal2}}
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal2"}}
                     </p>
                 </li>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal3}} </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal3"}} </p>
                 </li>
-                 <li class="flex items-center py-2">
+                <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal4}} </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal4"}} </p>
                 </li>
-                 <li class="flex items-center py-2">
+                <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal5}} </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal5"}} </p>
                 </li>
-                 <li class="flex items-center py-2">
+                <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{jobData1.goal6}} </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getFirstJobData "goal6"}} </p>
                 </li>
 
             </ul>
         </article>
         <!--Articulos ocultos por defecto-->
-        <article id="job2" class="hidden">
-            <div class="flex justify-between pb-5 ">
-                <h3 class="text-lg "> Ingeniero front end <span class="text-sky-500 font-bold text-lg">@pehuen</span>
-                </h3>
-                <h4 class="text-sm">marzo-2014 - noviembre-2016</h4>
+        <article id="{{getSecondJobData "id"}}" class="hidden">
+
+            <h3 class="text-lg "> {{getSecondJobData "title"}} <span
+                    class="text-sky-500 font-bold text-lg px-2">{{getSecondJobData "enterprice"}}</span>
+            </h3>
+            <div class="flex justify-between items-baseline">
+                <address class="text-sm">{{getSecondJobData "address"}} </address>
+                <h4 class="text-sm mr-10">{{getSecondJobData "period"}}</h4>
             </div>
+            <p class="mt-6 mb-3 text-lg ">{{getSecondJobData "description"}}</p>
+
 
             <ul>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
-                    </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getSecondJobData "goal1"}}</p>
                 </li>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursu vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                    </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getSecondJobData "goal2"}}</p>
                 </li>
-                <li class="flex items-center py-2">
-                    <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
-                        Donec in euismod lectus. Sed semper aliquet turpis non ultricies.
-                        Aenean cursus, magna sed varius vehicula, est velit elementum dolor, quis tempor
-                        nisi urna a orci.
-                        In mauris nulla, vehicula vel commodo vel, egestas eu est. Ut maximus aliquam
-                        placerat.
-                        Integer eget fermentum ligula. </p>
-                </li>
+
             </ul>
 
         </article>
-        <article id="job3" class="hidden">
-            <div class="flex justify-between pb-5 ">
-                <h3 class="text-lg "> Ingeniero back-end <span class="text-sky-500 font-bold text-lg">@pehuen</span>
-                </h3>
-                <h4 class="text-sm">marzo-2014 - noviembre-2016</h4>
+         <article id="{{getThirdJobData "id"}}">
+            <h3 id="jobTitle" class="text-xl "> {{getThirdJobData "title"}} en <a target="_blank" href="{{getThirdJobData "urlWeb"}}"
+                    class="text-sky-500 font-bold text-lg px-2"> {{getThirdJobData "enterprice"}} </a>
+            </h3>
+
+
+            <div class="flex justify-between items-baseline">
+                <address class="text-sm">{{getThirdJobData "address"}} </address>
+                <h4 class="text-sm mr-10">{{getThirdJobData "period"}}</h4>
             </div>
 
+            <p class="mt-6 mb-3 text-lg ">{{getThirdJobData "description"}}</p>
             <ul>
+
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "goal1"}}
                     </p>
                 </li>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursu vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "app1"}}
                     </p>
                 </li>
                 <li class="flex items-center py-2">
                     <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
-                        Donec in euismod lectus. Sed semper aliquet turpis non ultricies.
-                        Aenean cursus, magna sed varius vehicula, est velit elementum dolor, quis tempor
-                        nisi urna a orci.
-                        In mauris nulla, vehicula vel commodo vel, egestas eu est. Ut maximus aliquam
-                        placerat.
-                        Integer eget fermentum ligula. </p>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "app2"}} </p>
                 </li>
+                <li class="flex items-center py-2">
+                    <span class="text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "app3"}} </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "goal2"}} </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">{{getThirdJobData "goal3"}} </p>
+                </li>
+
             </ul>
-
         </article>
-        <article id="job4" class="hidden">
-            <div class="flex justify-between pb-5 ">
-                <h3 class="text-lg "> PROGRAMADOR<span class="text-sky-500 font-bold text-lg">@pehuen</span>
-                </h3>
-                <h4 class="text-sm">marzo-2020 - noviembre-2022</h4>
-            </div>
-
-            <ul>
-                <li class="flex items-center py-2">
-                    <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
-                    </p>
-                </li>
-                <li class="flex items-center py-2">
-                    <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursu vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                    </p>
-                </li>
-                <li class="flex items-center py-2">
-                    <span class="text-sky-500 font-black">&#9655;</span>
-                    <p class="text-stone-900 dark:text-cyan-500 font-normal px-5">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Pellentesque cursus vitae
-                        odio et ultrices.
-                        Vestibulum cursus semper arcu, a iaculis lacus porta ac.
-                        Aliquam eget sapien et urna hendrerit pulvinar. Aliquam pretium tortor aliquam ante
-                        aliquam elementum ac non massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus magna metus,
-                        vitae blandit ex aliquam a.
-                        Curabitur quis suscipit ante, non convallis nisl. Sed nec nunc pharetra, gravida
-                        enim commodo, interdum urna.
-                        Aliquam placerat, magna convallis rhoncus finibus, nulla quam commodo orci, non
-                        porttitor urna purus sed magna.
-                        Donec in euismod lectus. Sed semper aliquet turpis non ultricies.
-                        Aenean cursus, magna sed varius vehicula, est velit elementum dolor, quis tempor
-                        nisi urna a orci.
-                        In mauris nulla, vehicula vel commodo vel, egestas eu est. Ut maximus aliquam
-                        placerat.
-                        Integer eget fermentum ligula. </p>
-                </li>
-            </ul>
-
-        </article>
+        
     </div>
 
 </section>
